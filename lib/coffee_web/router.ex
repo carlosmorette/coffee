@@ -7,11 +7,9 @@ defmodule CoffeeWeb.Router do
 
   scope "/api" do
     pipe_through :api
-  
-    forward "/graphiql", Absinthe.Plug.GraphiQL,
-      schema: CoffeeWeb.Schema
 
-    forward "/", Absinthe.Plug,
-      schema: CoffeeWeb.Schema
+    forward "/graphiql", Absinthe.Plug.GraphiQL, schema: CoffeeWeb.Schema
+
+    forward "/", Absinthe.Plug, schema: CoffeeWeb.Schema
   end
 end

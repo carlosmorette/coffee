@@ -1,6 +1,8 @@
 defmodule Coffee.MixProject do
   use Mix.Project
 
+  # I stop here https://hexdocs.pm/absinthe/query-arguments.html
+
   def project do
     [
       app: :coffee,
